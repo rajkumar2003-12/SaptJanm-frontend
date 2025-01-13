@@ -10,6 +10,7 @@ import { Profile } from './pages/Profile'
 import { EditProfile } from './pages/EditProfile'
 import { User } from './pages/User'
 import { OtherUser } from './pages/OtherUser'
+import { EditUser } from './pages/EditUser'
 
 function App() {
 
@@ -24,6 +25,7 @@ return(
         <Route path="/dashboard" element={<Secure element={<Dashboard />} />} />
         <Route path ="/profile" element={<Secure element={<Profile/>}/>}/>
         <Route path ="/editProfile" element={<Secure element={<EditProfile/>}/>}/>
+        <Route path ="/editUser" element={<Secure element={<EditUser/>}/>}/>
         <Route path ="/user" element={<Secure element={<User/>}/>}/>
         <Route path ="/otheruser" element={<Secure element={<OtherUser/>}/>}/>
       </Routes>

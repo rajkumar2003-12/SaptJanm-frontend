@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 import { SignupUpdate } from "../utils/zod"; 
-import { Navbar2 } from "../components/Navbar2";
+import { Navbar } from "../components/Navbar";
 
-export function Signup() {
+export function EditUser() {
   const navigate = useNavigate();
   const [postInputs, setPostInputs] = useState({ username: "", email: "", password: "" });
   const [loading, setLoading] = useState<boolean>(false);
@@ -33,7 +33,7 @@ export function Signup() {
 
     setLoading(true);
     try {
-      const response = await axios.post(`${BACKEND_URL}/author/signup`, postInputs);
+      const response = await axios.post(`${BACKEND_URL}/user/updated`, postInputs);
       const authToken = response.data.token;
       console.log(authToken);
       localStorage.setItem("authToken", authToken);
@@ -56,11 +56,11 @@ export function Signup() {
 
   return (
      <div className="flex flex-col min-h-screen pt-16">
-        <Navbar2/>
+        <Navbar/>
     <div className="h-full flex justify-center items-center bg-gray-100 py-8 px-4">
       <div className="bg-white shadow-md rounded-lg p-6 md:p-10 w-full max-w-md mx-4 sm:mx-auto">
         <div className="text-center mb-6">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">Create an Account</h1>
+          <h1 className=" text-2xl font-bold text-black underline decoration-2">Update your details</h1>
         </div>
 
         <div>
@@ -123,23 +123,12 @@ export function Signup() {
           >
             {loading ? (
               <span className="flex justify-center items-center">
-                {/* <svg className="w-5 h-5 mr-2 animate-spin"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="text-white"></circle>
-                  <path fill="currentColor" d="M4 12a8 8 0 018-8V4a10 10 0 00-10 10h2z" className="text-red-300"></path>
-                </svg> */}
-                Signing up...
+                Updating...
               </span>
             ) : (
-              "Signup"
+              "Update"
             )}
           </button>
-
-          <div className="text-sm mt-4 font-medium text-gray-900">
-            Already have an account?{" "}
-            <a href="/login" className="hover:underline dark:text-red-600">
-              Login
-            </a>
-          </div>
         </div>
       </div>
     </div>

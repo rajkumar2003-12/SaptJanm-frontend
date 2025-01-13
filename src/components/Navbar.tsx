@@ -38,7 +38,9 @@ export function Navbar() {
                   </div>
                   </Link>
                   <ul>
+                    <Link to="/editUser">
                     <li><a className="block px-4 py-2 text-sm text-black hover:bg-gray-300">Settings</a></li>
+                    </Link>
                     <Link to="/main" >
                     <li onClick={handleLogout}><a className="block px-4 py-2 text-sm text-black hover:bg-red-200">Sign out</a></li>
                     </Link>

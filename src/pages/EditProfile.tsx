@@ -225,7 +225,7 @@ export function EditProfile() {
               disabled={loading}
               className={`mt-6 w-full p-3 ${loading ? "bg-gray-500" : "bg-blue-600"} text-white rounded-full hover:bg-gray-800 transition`}
             >
-              {loading ? "Saving..." : "Submit"}
+              {loading ? "Updating..." : "Update"}
             </button>
           </form>
         </div>
