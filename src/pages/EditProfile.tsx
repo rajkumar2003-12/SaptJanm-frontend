@@ -65,18 +65,17 @@ export function EditProfile() {
       console.log("Valid Profile Data:", validationResult);
 
       if(response.status===201){
-      alert("Profile saved successfully!");
+      alert("Profile updated successfully!");
       navigate("/dashboard")
-      console.log("Profile details", response.data);
+      console.log("Profile updated details", response.data);
       }
       if (!response) {
-        console.error("Failed to save profile:", response);
-        alert("Error saving profile.");
+        console.error("Failed to update:", response);
         return;
       }
     } catch (error) {
       console.error("error", error);
-      alert("Error during profile creation. Please try again.");
+      alert("Please update all details.");
     } finally {
       setLoading(false);
     }

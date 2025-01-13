@@ -38,10 +38,10 @@ export function EditUser() {
       console.log(authToken);
       localStorage.setItem("authToken", authToken);
       localStorage.setItem("id", response.data.id);
-      alert("Signup successful.");
-      navigate("/profile");
+      alert("Successfully updated.");
+      navigate("/dashboard");
     } catch (e) {
-      alert("already this mail has taken.");
+      alert("Please update all Inputes.");
       console.log("error", e);
     } finally {
       setLoading(false);

@@ -34,10 +34,7 @@ export function Signup() {
     setLoading(true);
     try {
       const response = await axios.post(`${BACKEND_URL}/author/signup`, postInputs);
-      const authToken = response.data.token;
-      console.log(authToken);
-      localStorage.setItem("authToken", authToken);
-      localStorage.setItem("id", response.data.id);
+      console.log("updated details",response.data);
       alert("Signup successful.");
       navigate("/profile");
     } catch (e) {
@@ -123,10 +120,6 @@ export function Signup() {
           >
             {loading ? (
               <span className="flex justify-center items-center">
-                {/* <svg className="w-5 h-5 mr-2 animate-spin"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="text-white"></circle>
-                  <path fill="currentColor" d="M4 12a8 8 0 018-8V4a10 10 0 00-10 10h2z" className="text-red-300"></path>
-                </svg> */}
                 Signing up...
               </span>
             ) : (
