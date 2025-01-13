@@ -54,8 +54,8 @@ export function Signup() {
   return (
      <div className="flex flex-col min-h-screen pt-16">
         <Navbar2/>
-    <div className="h-full flex justify-center items-center bg-gray-100 py-8 px-4">
-      <div className="bg-white shadow-md rounded-lg p-6 md:p-10 w-full max-w-md mx-4 sm:mx-auto">
+    <div className="h-full flex justify-center items-center bg-white ">
+      <div className="bg-white shadow-md p-3 rounded-lg md:p-10 w-full max-w-md mx-4 sm:mx-auto">
         <div className="text-center mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">Create an Account</h1>
         </div>

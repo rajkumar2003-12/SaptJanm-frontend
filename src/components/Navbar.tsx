@@ -28,7 +28,7 @@ export function Navbar() {
               <button onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300">
                 <span className="sr-only">Open user menu</span>
-                <img className="w-8 h-8 rounded-full"src="https://images.pexels.com/photos/1488318/pexels-photo-1488318.jpeg"/>
+                <img className="w-8 h-8 rounded-full"src="https://images.squarespace-cdn.com/content/v1/54035f3ae4b0e522f5dca08e/bf860377-80b1-4176-89b9-6a12dfa0b34c/Carla%26Dan-Bragg-Creek-Wedding-0721_websize.jpg"/>
               </button>
               {dropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg">

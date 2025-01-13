@@ -8,8 +8,7 @@ import { Signin } from './pages/Signin'
 import { Dashboard} from './pages/Dashboard'
 import { Profile } from './pages/Profile'
 import { EditProfile } from './pages/EditProfile'
-import { User } from './pages/User'
-import { OtherUser } from './pages/OtherUser'
+import { UserDetails } from './pages/UserDetails'
 import { EditUser } from './pages/EditUser'
 
 function App() {
@@ -26,8 +25,7 @@ return(
         <Route path ="/profile" element={<Secure element={<Profile/>}/>}/>
         <Route path ="/editProfile" element={<Secure element={<EditProfile/>}/>}/>
         <Route path ="/editUser" element={<Secure element={<EditUser/>}/>}/>
-        <Route path ="/user" element={<Secure element={<User/>}/>}/>
-        <Route path ="/otheruser" element={<Secure element={<OtherUser/>}/>}/>
+        <Route path ="/userDetails" element={<Secure element={<UserDetails/>}/>}/>
       </Routes>
     </BrowserRouter>
   </>

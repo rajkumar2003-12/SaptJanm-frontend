@@ -57,10 +57,10 @@ export function EditUser() {
   return (
      <div className="flex flex-col min-h-screen pt-16">
         <Navbar/>
-    <div className="h-full flex justify-center items-center bg-gray-100 py-8 px-4">
+    <div className="h-full flex justify-center items-center bg-white p-1">
       <div className="bg-white shadow-md rounded-lg p-6 md:p-10 w-full max-w-md mx-4 sm:mx-auto">
         <div className="text-center mb-6">
-          <h1 className=" text-2xl font-bold text-black underline decoration-2">Update your details</h1>
+          <h1 className=" text-xl  text-black underline decoration-2">Edit details</h1>
         </div>
 
         <div>

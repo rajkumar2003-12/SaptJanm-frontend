@@ -202,6 +202,7 @@ export function Profile() {
                 value={profile.education}
                 onChange={handleInputChange}
                 required
+                placeholder="ex-B.Tech"
                 className={`w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-red-600 ${errors.education ? 'border-red-500' : ''}`}
               />
               {errors.education && <p className="text-red-500 text-sm">{errors.education}</p>}
@@ -215,6 +216,7 @@ export function Profile() {
                 value={profile.occupation}
                 onChange={handleInputChange}
                 required
+                placeholder="ex-Software"
                 className={`w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-red-600 ${errors.occupation ? 'border-red-500' : ''}`}
               />
               {errors.occupation && <p className="text-red-500 text-sm">{errors.occupation}</p>}

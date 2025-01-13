@@ -82,11 +82,11 @@ export function EditProfile() {
   };
 
   return (
-    <div>
-      <Navbar />
+    <div className="flex flex-col min-h-screen pt-16">
+      <Navbar/>
       <div className="flex justify-center items-center min-h-screen">
-        <div className="bg-white shadow-lg rounded-full p-8 max-w-4xl w-full">
-          <h1 className="text-2xl font-bold mb-6 text-black underline decoration-2 text-center">Edit your Profile</h1>
+        <div className="bg-white shadow-lg p-8 max-w-4xl w-full">
+          <h1 className="text-xl mb-6 text-black underline decoration-2 text-center">Edit Profile</h1>
           <form
             className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             onSubmit={handleSubmit}
@@ -201,6 +201,7 @@ export function EditProfile() {
                 value={profile.education}
                 onChange={handleInputChange}
                 required
+                placeholder="ex-B.Tech"
                 className={`w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-red-600 ${errors.education ? 'border-red-500' : ''}`}
               />
               {errors.education && <p className="text-red-500 text-sm">{errors.education}</p>}
@@ -214,6 +215,7 @@ export function EditProfile() {
                 value={profile.occupation}
                 onChange={handleInputChange}
                 required
+                placeholder="ex-Software"
                 className={`w-full p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-red-600 ${errors.occupation ? 'border-red-500' : ''}`}
               />
               {errors.occupation && <p className="text-red-500 text-sm">{errors.occupation}</p>}
