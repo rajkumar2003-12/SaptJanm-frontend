@@ -32,11 +32,6 @@ export function Navbar() {
               </button>
               {dropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg">
-                  <Link to="/user">
-                  <div className="px-4 py-3">
-                    <span className="block text-sm font-medium text-black hover:bg-gray-300">Profile</span>
-                  </div>
-                  </Link>
                   <ul>
                     <Link to="/editUser">
                     <li><a className="block px-4 py-2 text-sm text-black hover:bg-gray-300">Settings</a></li>

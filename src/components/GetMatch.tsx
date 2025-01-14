@@ -7,18 +7,16 @@ import { Link } from "react-router-dom";
 
 export function Matches() {
   const [profiles, setProfiles] = useState<any[]>([]);
-  const [user, setUser] = useState<any>(null); 
   const [currentPage, setCurrentPage] = useState(1); 
   const [totalPages, setTotalPages] = useState(1); 
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(true); 
 
   const fetchMatches = async (page: number) => {
     const token = localStorage.getItem("authToken");
-    setLoading(true);
 
     try {
       const response = await axios.get(
-        `${BACKEND_URL}/profile/matches?page=${page}&limit=2`,
+        `${BACKEND_URL}/profile/matches?page=${page}&limit=4`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -37,9 +35,6 @@ export function Matches() {
           );
           return [...prev, ...newProfiles];
         });
-        if (page === 1) {
-          setUser(response.data.user[0]);
-        }
         setTotalPages(response.data.totalPages || 1);
       }
     } catch (error) {
@@ -73,29 +68,6 @@ export function Matches() {
   return (
     <div className="p-2 bg-white">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-1">
-        <div className="bg-white shadow-lg rounded-3xl overflow-hidden">
-          <div className="relative h-32 bg-gradient-to-r from-blue-500 to-purple-600">
-              <div className="absolute -bottom-12 left-4">
-                <div className="w-24 h-24 rounded-full border-4 border-white overflow-hidden">
-                  <User className="w-full h-full text-gray-300 bg-gray-100" />
-                </div>
-              </div>
-             </div>
-  
-          <div className="pt-16 pb-6 px-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Your Profile</h2>
-            {user && (
-              <div className="space-y-3">
-                <p className="text-black font-bold"><span className="font-medium"></span>{user.name}</p>
-                <p className="text-gray-700"><span className="font-medium"></span>{user.education}</p>
-                <p className="text-black font-bold"><span className="font-medium"></span> {user.occupation}</p>
-              </div>
-            )}
-          </div>
-          <Link to="/editProfile">
-            <h1 className="text-blue-600 underline decoration-2 mb-5">edit profile 🖋</h1>
-          </Link>
-        </div>
   
         <div className="bg-white shadow-lg rounded-3xl overflow-hidden">
           <div className="p-6">
