@@ -16,7 +16,7 @@ export function Matches() {
 
     try {
       const response = await axios.get(
-        `${BACKEND_URL}/profile/matches?page=${page}&limit=4`,
+        `${BACKEND_URL}/profile/matches?page=${page}&limit=2`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
