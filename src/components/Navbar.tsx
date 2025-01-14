@@ -22,7 +22,6 @@ export function Navbar() {
               <Link to="/dashboard">
               <li><a href="#" className="text-black hover:underline">Home</a></li>
               </Link>
-              <li><a href="#" className="text-black hover:underline">About</a></li>
             </ul>
             <div className="relative">
               <button onClick={() => setDropdownOpen(!dropdownOpen)}
