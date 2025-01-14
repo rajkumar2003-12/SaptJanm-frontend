@@ -34,11 +34,11 @@ export function UserProfile() {
       <div className="bg-white shadow-lg rounded-3xl overflow-hidden max-w-md w-full">
         <div className="relative h-32 bg-gradient-to-r from-blue-500 to-purple-600">
           <div className="absolute -bottom-12 left-4">
-            {/* <Link to="/userDetails" state={{userId:Number(profile.id)}}> */}
+            <Link to="/authorProfile">
             <div className="w-24 h-24 rounded-full border-4 border-white overflow-hidden">
               <User className="w-full h-full text-gray-300 bg-gray-100" />
             </div>
-            {/* </Link> */}
+            </Link>
           </div>
         </div>
 

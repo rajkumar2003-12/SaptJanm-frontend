@@ -3,7 +3,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BACKEND_URL } from "../config";
-import { useLocation } from "react-router-dom";
 import { UserIcon } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 
@@ -22,19 +21,15 @@ interface Profile {
   religion: string;
 }
 
-export function UserDetails() {
+export function AuthorProfile() {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
-
-  const location = useLocation();
-  const userId = location.state?.userId;
-  console.log("userId",userId)
 
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
         const token = localStorage.getItem("authToken");
-        const response = await axios.get(`${BACKEND_URL}/user/details/${userId}`, {
+        const response = await axios.get(`${BACKEND_URL}/user/details`, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -51,10 +46,8 @@ export function UserDetails() {
       }
     };
 
-    if (userId) {
       fetchUserDetails();
-    }
-  }, [userId]);
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen pt-16">

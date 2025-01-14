@@ -10,6 +10,7 @@ import { Profile } from './pages/Profile'
 import { EditProfile } from './pages/EditProfile'
 import { UserDetails } from './pages/UserDetails'
 import { EditUser } from './pages/EditUser'
+import { AuthorProfile } from './pages/AuthorProfile'
 
 function App() {
 
@@ -26,6 +27,7 @@ return(
         <Route path ="/editProfile" element={<Secure element={<EditProfile/>}/>}/>
         <Route path ="/editUser" element={<Secure element={<EditUser/>}/>}/>
         <Route path ="/userDetails" element={<Secure element={<UserDetails/>}/>}/>
+        <Route path ="/authorProfile" element={<Secure element={<AuthorProfile/>}/>}/>
       </Routes>
     </BrowserRouter>
   </>
