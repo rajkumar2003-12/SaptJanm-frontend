@@ -57,7 +57,7 @@ export function Main() {
         </div>
   
         <div className="flex flex-col h-full items-center justify-center space-y-6 ml-10">
-          <div className="text-center text-4xl font-bold text-red-600 px-3 py-10 max-w-lg rounded-lg shadow-lg border-t-4 border-b-4 border-gray-300">
+          <div className="text-center text-4xl font-bold text-red-600 px-3 py-10 max-w-lg rounded-lg shadow-lg">
             "A journey of a thousand miles begins with a single step, and a marriage begins with a promise of forever."
           </div>
         </div>
