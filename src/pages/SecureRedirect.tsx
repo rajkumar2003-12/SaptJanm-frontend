@@ -8,7 +8,7 @@ const useAuthRedirect = () => {
         const token = localStorage.getItem("token");
 
         if (token === null) {
-            navigate("/dashboard");
+            navigate("/main");
         } else {
             navigate("/dashboard");
         }

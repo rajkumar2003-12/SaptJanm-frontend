@@ -35,6 +35,10 @@ export function Signup() {
     try {
       const response = await axios.post(`${BACKEND_URL}/author/signup`, postInputs);
       console.log("updated details",response.data);
+      const authToken = response.data.token;
+      console.log(authToken);
+      localStorage.setItem("authToken", authToken);
+      localStorage.setItem("id", response.data.id);
       alert("Signup successful.");
       navigate("/profile");
     } catch (e) {
