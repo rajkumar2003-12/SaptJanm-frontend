@@ -34,10 +34,13 @@ export function Signin() {
       const response = await axios.post(`${BACKEND_URL}/author/signin`, postInputs);
       const authToken = response.data.token;
       console.log(authToken);
+      localStorage.setItem("authToken", authToken);
+      localStorage.setItem("id", response.data.id);
+      console.log(authToken);
       alert("Login successful.");
       navigate("/dashboard");
     } catch (e) {
-      alert("Error while login.");
+      alert("you entered wrong inputes.");
       console.log("error", e);
     } finally {
       setLoading(false);

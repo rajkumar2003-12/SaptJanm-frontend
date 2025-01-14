@@ -7,7 +7,7 @@ const useAuthRedirect = () => {
     useEffect(() => {
         const token = localStorage.getItem("token");
 
-        if (token === null) {
+        if (!token) {
             navigate("/main");
         } else {
             navigate("/dashboard");

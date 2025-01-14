@@ -20,7 +20,6 @@ return(
       <Routes>
         <Route path="/" element={<SecureRedirect/>}/>
         <Route path="/main" element={<Main/>}/>
-        {/* <Route path="/main" element={<SecureRedirect  {<Main />}/>} /> */}
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Signin/>}/>
         <Route path="/dashboard" element={<Secure element={<Dashboard />} />} />
